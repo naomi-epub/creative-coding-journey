@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3: The Grid System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <!-- bắt đầu grid -->
+         <div class="container">
+            <!-- hàng 1: 1 cột (12/12)*1 -->
+             <div class="row">
+                <div class="col-12">
+                    <div class="demo-box">Cột 12</div>
+                </div>
+             </div>
+            <!-- hàng 2: 2 cột (6/12)*2-->
+             <div class="row">
+                <div class="col-6">
+                    <div class="demo-box">Cột 6</div>
+                </div>
+                <div class="col-6">
+                    <div class="demo-box">Cột 6</div>
+                </div>
+             </div>
+            <!-- hàng 3: 3 cột (4/12)*4-->
+             <div class="row">
+                <div class="col-4">
+                    <div class="demo-box">Cột 4</div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-box">Cột 4</div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-box">Cột 4</div>
+                </div>
+             </div>
+            <!-- hàng 4: 4 cột (3/12)*4 -->
+             <div class="row">
+                <div class="col-3">
+                    <div class="demo-box">Cột 3</div>
+                </div>
+                <div class="col-3">
+                    <div class="demo-box">Cột 3</div>
+                </div>
+                <div class="col-3">
+                    <div class="demo-box">Cột 3</div>
+                </div>
+                <div class="col-3">
+                    <div class="demo-box">Cột 3</div>
+                </div>
+             </div>
+            <!-- hàng 5: bất đối xứng (8/12 + 4/12) -->
+             <div class="row">
+                <div class="col-8">
+                    <div class="demo-box">Cột 8</div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-box">Cột 4</div>
+                </div>
+             </div>
+            <!-- hàng 6: nested grid -->
+             <div class="row">
+                <div class="col-8">
+                    <div class="demo-box" style="background-color: #c70039;">
+                        <p>Cột 8 cha</p>
+                        <!-- .row mới bên trong .col-8 -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="demo-box" style="height: 40px; background-color: #ffc300;">Cột 6 con</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="demo-box" style="height: 40px; background-color: #ffc300;">Cột 6 con</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-box">Cột 4</div>
+                </div>
+             </div>
+         </div>
+        <!-- kết thúc grid -->
+    </main>
+</body>
+</html>

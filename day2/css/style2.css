@@ -1,3 +1,10 @@
+/* Reset và áp dụng border box toàn cục */
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 header{
     position: sticky;
     top: 0; /* stick vào top khi cuộn tới 0 */
