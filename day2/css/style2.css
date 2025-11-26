@@ -1,0 +1,40 @@
+header{
+    position: sticky;
+    top: 0; /* stick vào top khi cuộn tới 0 */
+    
+    background-color: white;
+    padding: 16px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    z-index: 100; /* đảm bảo header luôn ở trên */
+}
+
+/* thêm style cho main để không bị header che mất */
+main{
+    padding-top:20px;
+}
+.image-container{
+    /* thẻ cha là mỏ neo relative */
+    position: relative;
+    width: 600px;
+    margin-bottom: 50px;
+}
+.image-container img{
+    width: 100%;
+    display: block;/* xoá khoảng trống thừa dưới ảnh */
+}
+.close-btn{
+    /* thẻ con là absolute, định vị dựa trên relative */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    background-color: #032d64;
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 10%;
+    cursor: pointer;
+    z-index: 2;
+}
