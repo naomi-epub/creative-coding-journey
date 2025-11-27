@@ -1,0 +1,17 @@
+.card{
+    border: 0.5
+    px solid #ccc;
+    padding: 24px;
+    background-color: white;
+    height: 100%;
+}
+.card h3{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.card-section{
+    display: flex;
+}
+.card p{
+    margin-bottom: 0;
+}

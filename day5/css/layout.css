@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-/* Reset và áp dụng border box toàn cục */
-*, *::before, *::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    padding-top: 32px;
-    font-family: 'Inter',sans-serif;
-}
-
 /* bắt đầu hệ thống lưới */
 /* 1. container */
 .container{
@@ -54,23 +42,3 @@ body{
 .col-11{width: 91.66667%;}
 .col-12{width: 100%;}
 /* kết thúc hệ thống lưới */
-
-.card{
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 24px;
-    background-color: white;
-    height: 100%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-}
-.card h3{
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-.card-section{
-    margin-top: 64px;
-    margin-bottom: 64px;
-}
-.card p{
-    margin-bottom: 0;
-}
