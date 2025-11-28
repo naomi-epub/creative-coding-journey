@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8: CSS Flexbox - Flex Items</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="flex-container-demo">
+        <div class="flex-item item-a">Item A (flex: 1)</div>
+        <div class="flex-item item-b">Item B (flex: 2 - Gấp đôi)</div>
+        <div class="flex-item item-c">Item c (flex: 1)</div>
+    </div>
+    <div class="flex-container-shrink">
+        <div class="flex-item shrink-a">Rộng 500px, Shrink 1</div>
+        <div class="flex-item shrink-b">Rộng 500px, Shrink 0 (Không co)</div>
+    </div>
+    <p class="note">Kiểm tra container Shrink: Tổng basis 1000px, Container 800px. Thiếu 200px. Item B giữ 500px, Item A co lại 200px</p>
+</body>
+</html>

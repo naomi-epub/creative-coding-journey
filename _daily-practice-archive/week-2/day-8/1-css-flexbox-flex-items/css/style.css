@@ -1,0 +1,47 @@
+.flex-container-demo{
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    border: 2px solid #581845;
+    margin: 50px auto;
+}
+.flex-item{
+    padding: 24px;
+    border: 1px solid #888;
+    background-color: #ccc;
+    text-align: center;
+}
+
+/* 1. thử nghiệm flex-grow và order */
+/* sử dụng flex-basis: 0% để đảm bảo việc chia đều không bị ảnh hưởng bởi nội dung */
+.item-a{
+    flex: 1 1 0%;
+    order: 3;
+}
+.item-b{
+    flex: 2 1 0%;    /* gấp đôi A và C */
+    order: 2;
+}
+.item-c{
+    flex: 1 1 0%;
+    order: 1;
+}
+/* 2. thử nghiệm flex-shrink */
+.flex-container-shrink{
+    display: flex;
+    width: 800px;    /* cố định bắt buộc 800px */
+    border: 2px solid #c70039;
+    margin: 50px auto;
+}
+.shrink-a{
+    flex-basis: 500px;
+    flex-shrink: 1;    /* cho phép co lại 1 phần */
+    background-color: #555;
+    color: white;
+}
+.shrink-b{
+    flex-basis: 500px;
+    flex-shrink: 0;    /* không được co */
+    background-color: #ff5733;
+    color: white;
+}
