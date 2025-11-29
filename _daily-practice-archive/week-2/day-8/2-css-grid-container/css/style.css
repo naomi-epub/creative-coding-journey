@@ -1,0 +1,32 @@
+/* layout 12 cột */
+.grid-container{
+    display: grid;
+    max-width: 1200px;
+    margin: 50px auto;
+
+    /* định nghĩa lưới 12 cột */
+    grid-template-columns: repeat(12, 1fr);    /* 12 cột đều nhau */
+    gap: 24px;
+    grid-template-rows: auto;
+}
+
+/* định vị items thủ công trên lưới 12 cột (3/6/3) */
+.item-sidebar{
+    grid-column: 1 / span 3;    /* bắt đầu đường 1, kéo dài 3 cột */
+}
+.item-main{
+    grid-column: 4 / span 6;    /* bắt đầu đường 4, kéo dài 6 cột */
+}
+.item-ads{
+    grid-column: 10 / span 3;    /* bắt đàu đường 10, kéo dài 3 cột */
+}
+
+/* container responsive - sử dụng minmax và auto-fit */
+.grid-container-responsive{
+    display: grid;
+    max-width: 1200px;
+    margin: 50px auto;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
