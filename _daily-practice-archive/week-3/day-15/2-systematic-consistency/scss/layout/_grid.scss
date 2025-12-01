@@ -1,0 +1,44 @@
+/* bắt đầu hệ thống lưới */
+/* 1. container */
+.container{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    /* thêm padding để nội dung không dính sát viền */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* 2. row */
+.row{
+    /* negative margin: các cột .col- có padding 15px (tạo gutter) -> negative margin -15px sẽ .row ra ngoài, làm cho cột đầu tiên và cột cuối cùng thẳng hàng với .container */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+/* clearfix */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* 3. columns */
+/* style chung cho tất cả các cột */
+[class*='col-']{
+    float:left;
+    padding-left: 15px; /* gutter 15px mỗi bên */
+    padding-right: 15px;
+    /* tất cả các cột đều là border-box (đã set global) -> padding 15px sẽ nằm bên trong width đã định nghĩa */
+}
+/* chiều rộng từng cột */
+.col-1{width: 8.33333%;}
+.col-2{width: 16.66667%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33333%;}
+.col-5{width: 41.66667%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33333%;}
+.col-8{width: 66.66667%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33333%;}
+.col-11{width: 91.66667%;}
+.col-12{width: 100%;}
+/* kết thúc hệ thống lưới */

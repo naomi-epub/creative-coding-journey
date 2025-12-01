@@ -1,0 +1,25 @@
+// 1. color tokens
+$color-white: #ffffff;
+$color-dark: #1a1a1a;
+$color-gray-500: #888888;
+
+// semantic names
+$color-background-page:$color-white;
+$color-text-primary:$color-dark;
+$color-accent-cta: #ff5733;
+$color-text-secondary: $color-gray-500;
+$color-hover-cta:darken($color-accent-cta,10%);
+
+// 2. spacing tokens
+$space-unit: 8px;
+$space-s:$space-unit*2;
+$space-m:$space-unit*4;
+$space-section:$space-unit*12;
+$space-gap:$space-unit*3;
+
+// 3. typography tokens
+$font-family-base: "inter", san-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$font-size-h1: 1.908rem;
+$font-weight-bold:700;
