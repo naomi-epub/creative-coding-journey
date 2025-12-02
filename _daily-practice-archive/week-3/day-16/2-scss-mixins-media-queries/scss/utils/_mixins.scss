@@ -1,0 +1,25 @@
+@use 'breakpoints' as bp;
+@use 'variables' as *;
+
+@mixin tablet{
+    @media (min-width:bp.$tablet){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width:bp.$desktop){
+        @content;
+    }
+}
+
+@mixin heading-1{
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+    margin-bottom: $space-m;
+
+    @include tablet{
+        font-size: $font-size-h1*1.2;
+    }
+}

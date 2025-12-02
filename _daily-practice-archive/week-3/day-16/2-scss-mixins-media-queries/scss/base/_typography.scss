@@ -1,0 +1,6 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as m;
+
+h1{
+    @include m.heading-1;
+}

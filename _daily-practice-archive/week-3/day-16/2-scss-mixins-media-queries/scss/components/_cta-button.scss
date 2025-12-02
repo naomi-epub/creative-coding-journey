@@ -1,0 +1,23 @@
+@use '../utils/variables' as var;
+
+.cta-button{
+    display: inline-block;
+    background-color: var.$color-accent-cta;
+    color: var.$color-white;
+
+    // hover
+    &:hover{
+        background-color: var.$color-hover-cta;
+        transform: scale(1.05);
+    }
+
+    // active
+    &:active{
+        background-color: var.$color-text-primary;
+    }
+
+    font-size: var.$font-size-base;
+    font-weight: var.$font-weight-bold;
+    text-decoration: none;
+    padding: 12px 24px;
+}
