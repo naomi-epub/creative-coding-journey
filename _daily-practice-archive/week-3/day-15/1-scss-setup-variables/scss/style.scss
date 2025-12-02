@@ -1,4 +1,4 @@
-@import '_variables';
+@use 'variables' as *;
 
 body{
     background-color:$color-background-page;

@@ -1,0 +1,28 @@
+.hero-section{
+    /* negative space (contrast) */
+    padding:64px 120px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+.hero-title{
+    /* size & weight (contrast) tạo cảm giác heavy đối với tiêu đề lớn */
+    font-size: 64px;
+    font-weight: 700;
+    color: #111;
+    /* line height hẹp hơn đối với tiêu đề lớn */
+    line-height: 1.2;
+    /* proximity (gestalt) -> cụm title và subtitle gần nhau */
+    margin-bottom: 16px;
+}
+.hero-subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    color: #555; /* giảm tương phản với h1 */
+    line-height: 1.6; /* line height cao cho đoạn văn để dễ đọc */
+    /* proximity (gestalt) -> cụm titlte & subtitle xa button */
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

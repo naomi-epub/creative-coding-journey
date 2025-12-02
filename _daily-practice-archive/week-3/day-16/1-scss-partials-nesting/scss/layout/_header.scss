@@ -1,0 +1,46 @@
+@use '../utils/variables' as var;
+
+header{
+    background-color: var.$color-white;
+    border-bottom: 1px solid #eee;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .navbar-logo{
+        a{
+            font-size: var.$font-size-h1;
+            font-weight: var.$font-weight-bold;
+            color: var.$color-dark;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .navbar{
+    /* kích hoạt flexbox, căn trục chính & trục phụ*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .navbar-menu{
+        display: flex;
+        list-style-type: none; /* bỏ dấu chấm của ul */
+        margin: 0;
+        padding: 0;
+        gap: 64px;
+        li{
+            a{
+                font-size: var.$font-size-base;
+                color: var.$color-text-primary;
+                text-decoration: none;
+                &:hover{
+                    color: var.$color-accent-cta;
+                }
+            }
+        }
+    }
+}
