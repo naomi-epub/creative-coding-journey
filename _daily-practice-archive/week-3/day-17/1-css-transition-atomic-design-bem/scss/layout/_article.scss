@@ -1,0 +1,23 @@
+@use '../utilities/variables' as var;
+.article-body{
+    margin: 64px auto;
+    padding: 0 16px;
+    max-width: 65ch;    /* độ dài dòng lý tưởng */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.article-body h2{
+    color: #222;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.article-body p{
+    color: #555;
+    line-height: 1.8;
+    padding-bottom: 8px;
+    text-align: center;
+}

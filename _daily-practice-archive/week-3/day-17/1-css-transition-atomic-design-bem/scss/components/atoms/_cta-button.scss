@@ -1,0 +1,22 @@
+@use '../../utilities/variables' as *;
+.cta-button{
+    display: inline-block;
+    background-color: $color-accent-cta;
+    color: $color-white;
+
+    // hover
+    &:hover{
+        background-color: $color-hover-cta;
+        transform: scale(1.05);
+    }
+
+    // active
+    &:active{
+        background-color: $color-text-primary;
+    }
+
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    padding: 12px 24px;
+}

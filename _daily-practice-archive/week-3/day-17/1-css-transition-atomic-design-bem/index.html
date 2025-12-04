@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17: CSS Transitions & Atomic Design & BEM</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <main>
+        <!-- bắt đầu header -->
+         <header class="site-header">
+            <!-- áp dụng flexbox cho .navbar -->
+                <nav class="navbar">
+                <!-- item 1 -->
+                    <div class="navbar-logo">
+                    <a href="/">NAOMI NGUYEN</a>
+                    </div>
+                <!-- item 2 -->
+                    <ul class="navbar-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About me</a></li>
+                    <li><a href="#">Work</a></li>
+                    </ul>
+                </nav>
+         </header>
+        <!-- kết thúc hero section -->
+
+        <!-- bắt đầu hero section -->
+         <section class="hero-section">
+         <h1 class="hero-title">Welcome to my creative coding journey</h1>
+         <p class="hero-subtitle">The place where design principles and coding techniques were built systematically.</p>
+         <a href="#" class="cta-button">Discover now!</a>
+         </section>
+        <!-- kết thúc hero section -->
+
+        <!-- bắt đầu value section -->
+         <section class="value-section">
+            <h2>I build this with</h2>
+            <div class="row card-section">
+                <div class="col-4">
+                    <div class="card card-1">
+                        <h3>Grid</h3>
+                        <p>The foundation of the system</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card card-2">
+                        <h3>Position</h3>
+                        <p>Spatial positioning</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card card-3">
+                        <h3>Box Model</h3>
+                        <p>Dimensional calculation model</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- kết thúc value section -->
+
+        <!-- bắt đầu article body -->
+         <section class="article-body">
+            <h2>Where does it come from?</h2>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+            <button class="btn btn--primary">Hover Me</button>
+         </section>
+        <!-- kết thúc value section -->
+    </main>
+</body>
