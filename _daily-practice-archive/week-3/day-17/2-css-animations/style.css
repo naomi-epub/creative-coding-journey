@@ -1,0 +1,132 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f9f9f9;
+}
+
+.site-header {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    /* kích hoạt flexbox, căn trục chính & trục phụ*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    /* biến các <li> thành các flex items */
+    display: flex;
+    list-style-type: none; /* bỏ dấu chấm của ul */
+    margin: 0;
+    padding: 0;
+    gap: 64px;
+}
+
+.navbar-menu a {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar-logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-section {
+    /* negative space (contrast) */
+    padding: 64px 120px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.hero-title {
+    /* size & weight (contrast) tạo cảm giác heavy đối với tiêu đề lớn */
+    font-size: 64px;
+    font-weight: 700;
+    color: #111;
+    /* line height hẹp hơn đối với tiêu đề lớn */
+    line-height: 1.2;
+    /* proximity (gestalt) -> cụm title và subtitle gần nhau */
+    margin-bottom: 16px;
+    opacity: 0;   /* trạng thái ban đầu phải là 0 */
+    animation: fadeInUp 0.5s ease forwards;    /* chạy 1 lần và giữ lại (forwards) */
+    animation-delay: 0.5s;    /* độ trễ cho tiêu đề */
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555; /* giảm tương phản với h1 */
+    line-height: 1.6; /* line height cao cho đoạn văn để dễ đọc */
+    /* proximity (gestalt) -> cụm titlte & subtitle xa button */
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;   /* trạng thái ban đầu phải là 0 */
+    animation: fadeInUp 1.5s ease forwards;    /* chạy 1 lần và giữ lại (forwards) */
+    animation-delay: 0.5s;    /* độ trễ cho tiêu đề */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff5733;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 24px;
+    opacity: 0;   /* trạng thái ban đầu phải là 0 */
+    animation: fadeInUp 2s ease forwards;    /* chạy 1 lần và giữ lại (forwards) */
+    animation-delay: 0.5s;    /* độ trễ cho tiêu đề */
+}
+.cta-button:hover {
+    background-color: #ff2d00;
+    transform: scale(1.05);
+    animation: shake 0.5s ease-in-out 1;
+}
+.cta-button:active {
+    background-color: #1a1a1a;
+}
+
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake{
+    0%, 100%{
+        transform: translateX(0);        /* bắt đầu và kết thúc */
+    }
+    20%,60%{
+        transform: translateX(-5px);        /* lệch trái */
+    }
+    40%,80%{
+        transform: translateX(5px);        /* lệch phải */
+    }
+} 
