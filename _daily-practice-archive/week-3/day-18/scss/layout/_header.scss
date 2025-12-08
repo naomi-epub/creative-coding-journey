@@ -1,0 +1,36 @@
+.site-header{
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar{
+    /* kích hoạt flexbox, căn trục chính & trục phụ*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-menu{
+    /* biến các <li> thành các flex items */
+    display: flex;
+    list-style-type: none; /* bỏ dấu chấm của ul */
+    margin: 0;
+    padding: 0;
+    gap: 64px;
+}
+.navbar-menu a{
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    text-decoration: none;
+}
+.navbar-logo a{
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

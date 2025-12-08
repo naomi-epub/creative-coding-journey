@@ -1,0 +1,18 @@
+@use '../../utilities/variables' as var;
+.btn{
+    width: fit-content;
+    background-color: var.$color-accent-cta;
+    color: var.$color-white;
+    padding: var.$space-s var.$space-m;
+    border-radius: var.$space-s;
+    border: none;
+
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover{
+        background-color: var.$color-hover-cta;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);        // hiệu ứng chiều sâu
+        cursor: pointer;
+    }
+}

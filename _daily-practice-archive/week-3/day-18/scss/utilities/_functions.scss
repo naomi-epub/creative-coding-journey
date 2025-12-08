@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+@function px-to-rem($px){
+    @return calc ($px / 16px) * 1rem;
+}
+
+@function color-text-contrast($color){
+    $threshold:0.5;
+    @if(lightness($color) > $threshold*100){
+        @return #000000;
+    } @else{
+        @return #ffffff;
+    }
+}

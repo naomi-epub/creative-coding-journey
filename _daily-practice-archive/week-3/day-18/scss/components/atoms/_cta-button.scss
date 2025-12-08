@@ -1,0 +1,32 @@
+@use '../../utilities/variables' as vars;
+@use '../../utilities/functions' as fn;
+
+// Tính giá trị trước, ở scope file
+$bg-color: vars.$color-text-primary;
+$text-color: fn.color-text-contrast($bg-color);
+
+.cta-button {
+    display: inline-block;
+
+    &:active {
+    background-color: vars.$color-text-primary;
+    }
+
+    font-size: vars.$font-size-base;
+    font-weight: vars.$font-weight-bold;
+    text-decoration: none;
+    padding: 12px 24px;
+
+    &--inverse {
+        // Nếu muốn override chỉ cho biến trong modifier, tính trực tiếp ở đây
+        // $bg-color và $text-color ở file-level đã có giá trị mặc định
+    }
+
+    background-color: $bg-color;
+    color: $text-color;
+
+    &:hover {
+    background-color: lighten($bg-color, 10%);
+    transform: scale(1.05);
+    }
+}
