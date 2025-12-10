@@ -1,0 +1,8 @@
+.illustration path{
+    stroke: purple;
+    fill: purple;
+}
+
+.icon path{
+    stroke: rgb(25, 0, 255);
+}
