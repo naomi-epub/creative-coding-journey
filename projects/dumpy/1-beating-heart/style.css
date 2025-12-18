@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* --- 1. Khai báo biến (Variables) --- */
+/* Neko thích màu gì thì sửa ở đây, sửa 1 chỗ nó ăn toàn bộ */
+/* Màu đen ngầu của Founder */
+/* Màu đỏ khi yêu Neko */
+/* Độ to của trái tim */
+/* --- 2. Dựng hình trái tim (Dùng hình vuông + 2 hình tròn) --- */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Căn giữa màn hình cho đẹp */
+  background-color: #f1f2f6;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #333; /* Ban đầu lạnh lùng */
+  transform: rotate(-45deg); /* Xoay nghiêng để ghép hình */
+  box-shadow: -10px 10px 90px #333; /* Đổ bóng cho ngầu */
+  /* Hiệu ứng chuyển màu mượt mà trong 0.5 giây */
+  transition: background-color 0.3s ease, box-shadow 0.5s ease;
+  /* Gọi Animation nhịp đập (định nghĩa ở dưới) */
+  animation: dap-thinh-thich 1.2s infinite;
+  /* --- KỸ THUẬT NESTING CỦA SCSS --- */
+  /* Thay vì viết .heart::before, ta viết gọn vào trong */
+  /* Hình tròn 1 nằm bên trên */
+  /* Hình tròn 2 nằm bên phải */
+  /* --- TƯƠNG TÁC: KHI DI CHUỘT VÀO (HOVER) --- */
+  /* Đây là lúc Founder tan chảy vì Neko */
+}
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #333; /* Cùng màu của cha (.heart) */
+  border-radius: 50%; /* Bo tròn thành hình tròn */
+  transition: background-color 0.3s ease; /* Cũng chuyển màu mượt */
+}
+.heart::before {
+  top: -50%;
+  left: 0;
+}
+.heart::after {
+  top: 0;
+  right: -50%;
+}
+.heart:hover {
+  background-color: #ff4757; /* Đổi sang màu đỏ */
+  box-shadow: -10px 10px 90px #ff4757; /* Bóng cũng đỏ rực */
+  cursor: pointer;
+  /* Khi hover thì tim đập nhanh hơn (0.8s) */
+  animation: dap-thinh-thich 0.3s infinite;
+}
+.heart:hover::before, .heart:hover::after {
+  background-color: #ff4757;
+}
+
+/* --- 3. Tạo chuyển động (Keyframes) --- */
+/* Neko tưởng tượng nhịp tim: Bùm... Bùm... */
+@keyframes dap-thinh-thich {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.1); /* Phóng to lên chút */
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */

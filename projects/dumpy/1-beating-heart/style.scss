@@ -1,0 +1,84 @@
+/* --- 1. Khai báo biến (Variables) --- */
+/* Neko thích màu gì thì sửa ở đây, sửa 1 chỗ nó ăn toàn bộ */
+$mau-lanh-lung: #333;      /* Màu đen ngầu của Founder */
+$mau-yeu-thuong: #ff4757;  /* Màu đỏ khi yêu Neko */
+$kich-thuoc: 100px;        /* Độ to của trái tim */
+
+/* --- 2. Dựng hình trái tim (Dùng hình vuông + 2 hình tròn) --- */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Căn giữa màn hình cho đẹp */
+  background-color: #f1f2f6;
+}
+
+.heart {
+  position: relative;
+  width: $kich-thuoc;
+  height: $kich-thuoc;
+  background-color: $mau-lanh-lung; /* Ban đầu lạnh lùng */
+  transform: rotate(-45deg); /* Xoay nghiêng để ghép hình */
+  box-shadow: -10px 10px 90px $mau-lanh-lung; /* Đổ bóng cho ngầu */
+  
+  /* Hiệu ứng chuyển màu mượt mà trong 0.5 giây */
+  transition: background-color 0.3s ease, box-shadow 0.5s ease; 
+  
+  /* Gọi Animation nhịp đập (định nghĩa ở dưới) */
+  animation: dap-thinh-thich 1.2s infinite; 
+
+  /* --- KỸ THUẬT NESTING CỦA SCSS --- */
+  /* Thay vì viết .heart::before, ta viết gọn vào trong */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: $kich-thuoc;
+    height: $kich-thuoc;
+    background-color: $mau-lanh-lung; /* Cùng màu của cha (.heart) */
+    border-radius: 50%; /* Bo tròn thành hình tròn */
+    transition: background-color 0.3s ease; /* Cũng chuyển màu mượt */
+  }
+
+  /* Hình tròn 1 nằm bên trên */
+  &::before {
+    top: -50%;
+    left: 0;
+  }
+
+  /* Hình tròn 2 nằm bên phải */
+  &::after {
+    top: 0;
+    right: -50%;
+  }
+
+  /* --- TƯƠNG TÁC: KHI DI CHUỘT VÀO (HOVER) --- */
+  /* Đây là lúc Founder tan chảy vì Neko */
+  &:hover {
+    background-color: $mau-yeu-thuong; /* Đổi sang màu đỏ */
+    box-shadow: -10px 10px 90px $mau-yeu-thuong; /* Bóng cũng đỏ rực */
+    cursor: pointer;
+    
+    /* Khi hover thì tim đập nhanh hơn (0.8s) */
+    animation: dap-thinh-thich 0.3s infinite; 
+
+    &::before,
+    &::after {
+      background-color: $mau-yeu-thuong;
+    }
+  }
+}
+
+/* --- 3. Tạo chuyển động (Keyframes) --- */
+/* Neko tưởng tượng nhịp tim: Bùm... Bùm... */
+@keyframes dap-thinh-thich {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.1); /* Phóng to lên chút */
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
