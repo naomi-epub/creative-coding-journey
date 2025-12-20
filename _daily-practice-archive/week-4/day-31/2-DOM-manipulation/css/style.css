@@ -1,0 +1,25 @@
+.card-list {
+    display: flex;
+    gap: 16px;
+}
+.card {
+    background-color: #eee;
+    padding: 16px;
+    transition: background-color 0.3s;
+}
+/* Class thay đổi Style */
+.is-active {
+    background-color: #FF5733; 
+    color: white;
+    border: 2px solid #C70039;
+}
+
+/* Class cho Dark Mode (Áp dụng cho Body hoặc Container chính) */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+.dark-mode .card {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+}
