@@ -1,0 +1,73 @@
+// js/utils.js
+// Export hằng số
+export const BASE_SPACING = 8; 
+
+// Export hàm tính tổng (Pure Function)
+export const calculateSum = (base, ...numbersToAdd) => {
+    return base + numbersToAdd.reduce((acc, num) => acc + num, 0);
+};
+
+// Export hàm chuyển đổi (Pure Function)
+export const pxToRem = (px) => {
+    return `${px / 16}rem`;
+};
+
+// Hàm kiểm tra tính chẵn (Pure Function)
+export const isEven = (num) => num % 2 === 0;
+
+/* Thêm các hàm Array Method, Destructuring đã học vào đây */
+
+const todoInput = document.getElementById('todo-input');
+const addButton = document.getElementById('add-btn');
+const todoList = document.getElementById('todo-list');
+
+const createTodoItem = (text) => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('todo-item');
+    listItem.id = `todo-${Date.now()}`; // tạo ID duy nhất
+    listItem.textContent = text;
+
+    const removeBtn = document.createElement('span');
+    removeBtn.textContent = 'Xóa';
+    removeBtn.classList.add('remove-btn');
+
+    listItem.appendChild(removeBtn);
+    return listItem;
+};
+
+addButton.addEventListener('click', () => {
+    const text = todoInput.value.trim();
+    if (text) {
+        const newItem = createTodoItem(text);
+        todoList.appendChild(newItem);
+        todoInput.value = '';
+
+        // 👉 Sau khi thêm item mới, ta thực hiện yêu cầu:
+        const todoItemsArray = [...document.querySelectorAll('.todo-item')];
+
+        // map() để tạo mảng dữ liệu mới
+        const todoData = todoItemsArray.map(item => ({
+            id: item.id,
+            isAnimated: false
+        }));
+
+        console.log('Danh sách dữ liệu:', todoData);
+
+        // forEach() để gắn sự kiện click toggle
+        todoItemsArray.forEach(item => {
+            item.addEventListener('click', (e) => {
+                // Nếu click vào nút Xóa
+                if (e.target.classList.contains('remove-btn')) {
+                    e.target.parentElement.remove();
+                    console.log('Item đã được xóa');
+                    return;
+                }
+                // Nếu click vào chính item
+                if (e.target.classList.contains('todo-item')) {
+                    e.target.classList.toggle('is-done');
+                    console.log('Trạng thái hoàn thành đã được chuyển đổi');
+                }
+            });
+        });
+    }
+});
