@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="clock-container">
+    <div class="header">
+      <h1>Riel time digital clock</h1>
+      <label class="toggle">
+        <input type="checkbox" id="formatToggle" />
+        <span>Chế độ 24h</span>
+      </label>
+    </div>
+
+    <div class="clock">
+      <span class="digit" id="hours">00</span>
+      <span class="colon">:</span>
+      <span class="digit" id="minutes">00</span>
+      <span class="colon">:</span>
+      <span class="digit" id="seconds">00</span>
+      <span class="ampm" id="ampm"></span>
+    </div>
+
+    <div class="date" id="date"></div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

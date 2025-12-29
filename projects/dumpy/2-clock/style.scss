@@ -1,0 +1,119 @@
+$bg: #0f172a;       // nền tối (slate-900)
+$panel: #111827;    // nền khối
+$accent: #22d3ee;   // cyan
+$text: #e5e7eb;     // text sáng (gray-200)
+$muted: #94a3b8;    // gray-400
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: radial-gradient(1000px 500px at 20% 20%, #0b1020, $bg);
+  color: $text;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.clock-container {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    color: $muted;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: $text;
+
+    input {
+      width: 20px;
+      height: 20px;
+      accent-color: $accent;
+      cursor: pointer;
+    }
+  }
+}
+
+.clock {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 32px 40px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.25));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: $shadow;
+
+  .digit {
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(48px, 8vw, 120px);
+    font-weight: 800;
+    line-height: 1;
+    color: $accent;
+    text-shadow: 0 0 12px rgba($accent, 0.35);
+  }
+
+  .colon {
+    font-size: clamp(42px, 7vw, 110px);
+    color: lighten($accent, 20%);
+    opacity: 0.9;
+    animation: pulse 1s steps(1, end) infinite;
+  }
+
+  .ampm {
+    margin-left: 8px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: $bg;
+    background: $accent;
+    border-radius: 6px;
+    align-self: center;
+    box-shadow: 0 0 10px rgba($accent, 0.4);
+  }
+}
+
+.date {
+  margin-top: 18px;
+  text-align: center;
+  color: $muted;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+}
+
+@keyframes pulse {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .header {
+    position: static;
+    margin-bottom: 12px;
+  }
+
+  .clock {
+    padding: 24px 28px;
+    gap: 10px;
+  }
+}
