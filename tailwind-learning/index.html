@@ -2,12 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <style>
-      body {
-        visibility: hidden;
-        opacity: 0;
-      }
-    </style>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tailwind-learning</title>
@@ -16,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
   <body class="bg-slate-900 h-screen flex flex-col justify-center">
+    <div id="loader" class="fixed inset-0 z-9999 bg-white flex flex-col justify-center items-center gap-4">
+      <div class="w-12 h-12 border-4 border-slate-700 border-t-purple-500 rounded-full animate-spin"></div>
+      <div class="text-slate-900 text-xl font-bold font-playfair animate-pulse">On the way...</div>
+    </div>
     <div class="grid grid-cols-3 gap-4 p-12">
       <div class="bento-item col-span-2 bg-purple-500">1</div>
       <div class="bento-item bg-pink-500">2</div>
