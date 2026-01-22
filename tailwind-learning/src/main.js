@@ -4,8 +4,13 @@ import gsap from 'gsap'
 window.addEventListener('load', () => {
     
     const loader = document.getElementById('loader');
+    const mainContent = document.getElementById('main-content');
     const items = document.querySelectorAll('.bento-item, .card');
     
+    // BƯỚC QUAN TRỌNG: Bật hiển thị cho khung chính (nhưng vẫn để opacity 0 để GSAP diễn)
+    // autoAlpha: 0 nghĩa là opacity: 0 + visibility: hidden
+    gsap.set(mainContent, { autoAlpha: 1 }); 
+
     const tl = gsap.timeline();
 
     tl
@@ -13,6 +18,7 @@ window.addEventListener('load', () => {
         yPercent: -100,
         duration: 1.5,
         ease: "power4.inOut",
+        onComplete: () => loader.style.display = 'none'
     })
 
     .fromTo(items, 
