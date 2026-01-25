@@ -1,5 +1,59 @@
 @import "tailwindcss";
 @theme {
-  --font-instrument: "Instrument Sans", sans serif;
+  /* font */
+  --font-anek-tamil: "Anek Tamil", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", sans-serif;
+  /* color */
   --color-accent: #808CFD;
+  --color-primary: #E9ECFF;
+  --color-secondary: #E9ECFF;
+  /* breakpoint */
+  --breakpoint-md: 800px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1280px;
+}
+@layer base {
+  h1 {
+    @apply text-[37px] md:text-[71px] xl:text-[116px] font-anek-tamil font-extrabold;
+    @apply leading-[0.8] md:leading-[1.1];
+    @apply tracking-[-0.05em];
+  }
+  h2 {
+    @apply text-[28px] md:text-[36px] xl:text-[45px] font-anek-tamil font-bold;
+    @apply leading-[0.91];
+    @apply tracking-[-0.03em];
+  }
+  h3 {
+    @apply text-[44px] md:text-[57px] font-anek-tamil font-bold;
+    @apply leading-normal;
+    @apply tracking-[-0.05em];
+  }
+  h4 {
+    @apply text-[22px] md:text-[25px] font-anek-tamil font-bold;
+    @apply leading-[0.91];
+    @apply tracking-[-0.03em];
+  }
+  h5 {
+    @apply text-[22px] md:text-[25px] font-anek-tamil font-bold;
+    @apply leading-[0.91];
+    @apply tracking-[-0.03em];
+  }
+}
+@layer components {
+  .p2 {
+    @apply text-[15px] xl:text-[17px] font-geist font-normal;
+    @apply leading-[1.31];
+    @apply tracking-[0.01em];
+  }
+  .link-nav {
+    @apply text-[15px] font-geist-mono font-normal;
+    @apply leading-[1.1];
+    @apply tracking-[-0.01em];
+  }
+  .link-button {
+    @apply text-[15px] font-geist-mono font-normal;
+    @apply leading-[1.1];
+    @apply tracking-[-0.01em];
+  }
 }
