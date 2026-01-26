@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/icon/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2-gym-landing-page</title>
     <!-- anek tamil -->
@@ -17,14 +17,46 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- instrument sans -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style>
       #main-content { visibility: hidden; opacity: 0; }
     </style>
   </head>
   <body>
-    <div id="main-content">
-                  
+    <div id="loader">
     </div>
+    
+    <nav class="fixed top-0 left-0 w-full z-50 items-center bg-secondary border-b">
+      <div class="relative z-50 p-5 flex justify-between items-center">
+        <div id="logo" class="flex gap-[8.91px] items-center">
+          <img src="./src/icon/logo.svg" alt="PrimalTraining Logo">
+          <p class="font-instrument-sans font-bold text-[20px] leading-[1.1] tracking-[-0.05em]">PrimalTraining</p>
+        </div>
+        <ul class="hidden md:flex gap-12 items-center">
+          <li><a href="#" class="link-nav hover:opacity-60 focus:text-primary transition-colors">HOME</a></li>
+          <li><a href="#" class="link-nav hover:opacity-60 focus:text-primary transition-colors">ABOUT</a></li>
+          <li><a href="" class="px-5 py-2 bg-primary text-black rounded-[7.25px] link-button hover:bg-black hover:text-white">RESERVE YOUR SPOT</a></li>
+        </ul>
+
+        <button id="menu-btn" class="md:hidden">
+          <img id="menu-icon" src="./src/icon/Plus.svg" alt="Expand icon" class="transition-transform duration-300">
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white grid grid-rows-[0fr] transition-all duration-300 ease-out">
+        <div class="overflow-hidden pb-px">
+          <div class="flex flex-col">
+            <a href="#" class="link-nav-mobile border-t focus:text-primary">HOME</a>
+            <a href="#" class="link-nav-mobile focus:text-primary">ABOUT</a>
+            <a href="#" class="link-nav-mobile bg-primary text-white focus:bg-black">RESERVE YOUR SPOT</a>
+          </div>
+       </div>
+      </div>
+    </nav>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -4,9 +4,9 @@
   --font-anek-tamil: "Anek Tamil", sans-serif;
   --font-geist: "Geist", sans-serif;
   --font-geist-mono: "Geist Mono", sans-serif;
+  --font-instrument-sans: "Instrument Sans", sans-serif;
   /* color */
-  --color-accent: #808CFD;
-  --color-primary: #E9ECFF;
+  --color-primary: #808CFD;
   --color-secondary: #E9ECFF;
   /* breakpoint */
   --breakpoint-md: 800px;
@@ -42,18 +42,16 @@
 }
 @layer components {
   .p2 {
-    @apply text-[15px] xl:text-[17px] font-geist font-normal;
-    @apply leading-[1.31];
-    @apply tracking-[0.01em];
+    @apply text-[15px] xl:text-[17px] font-geist font-normal leading-[1.31] tracking-[0.01em];
   }
   .link-nav {
-    @apply text-[15px] font-geist-mono font-normal;
-    @apply leading-[1.1];
-    @apply tracking-[-0.01em];
+    @apply text-[15px] font-geist-mono font-normal leading-[1.1] tracking-[-0.01em] cursor-pointer;
   }
   .link-button {
-    @apply text-[15px] font-geist-mono font-normal;
-    @apply leading-[1.1];
-    @apply tracking-[-0.01em];
+    @apply text-[15px] font-geist-mono font-normal leading-[1.1] tracking-[-0.01em] cursor-pointer;
+  }
+  .link-nav-mobile {
+    @apply text-[30px] font-geist-mono font-normal text-black leading-[1.1] tracking-[-0.01em];
+    @apply p-5 border-b border-black;
   }
 }
