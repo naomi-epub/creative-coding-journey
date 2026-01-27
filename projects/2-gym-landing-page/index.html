@@ -21,15 +21,14 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <style>
-      #main-content { visibility: hidden; opacity: 0; }
-    </style>
   </head>
   <body>
-    <div id="loader">
-    </div>
+    <!-- loader -->
+     <div id="loader">
+     </div>
     
-    <nav class="fixed top-0 left-0 w-full z-50 items-center bg-secondary border-b">
+    <!-- navbar -->
+     <nav class="fixed top-0 left-0 w-full z-50 items-center bg-secondary border-b">
       <div class="relative z-50 p-5 flex justify-between items-center">
         <div id="logo" class="flex gap-[8.91px] items-center">
           <img src="./src/icon/logo.svg" alt="PrimalTraining Logo">
@@ -46,7 +45,7 @@
         </button>
       </div>
       <!-- mobile menu -->
-      <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white grid grid-rows-[0fr] transition-all duration-300 ease-out">
+       <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white grid grid-rows-[0fr] transition-all duration-300 ease-out">
         <div class="overflow-hidden pb-px">
           <div class="flex flex-col">
             <a href="#" class="link-nav-mobile border-t focus:text-primary">HOME</a>
@@ -54,9 +53,50 @@
             <a href="#" class="link-nav-mobile bg-primary text-white focus:bg-black">RESERVE YOUR SPOT</a>
           </div>
        </div>
-      </div>
-    </nav>
+       </div>
+     </nav>
 
+    <!-- hero headline section -->
+     <section class="w-full pt-18.25 border-b">
+      <h1 class="p-5">Train Hard. <span class="text-primary">Live Better</span></h1>
+     </section>
+
+    <!-- hero section -->
+     <section class="grid grid-cols-1 md:grid-cols-3 h-tablet-hero xl:h-desktop-hero">
+      <!-- img -->
+       <div class="md:col-span-2 w-full h-full">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="./src/img/Image 1-home-desktop.png">
+          <source media="(min-width: 800px)" srcset="./src/img/Image 1-home-tablet.png">
+          <img src="./src/img/Image 1-home-mobile.png" alt="Gym Hero Image" class="w-full h-mobile-hero md:h-tablet-hero xl:h-desktop-hero object-cover">
+        </picture>
+       </div>
+      <!-- text -->
+       <div class="flex flex-col justify-between p-5 gap-1.5">
+        <h2>FOR THE COMMITTED</h2>
+        <div class="flex flex-col gap-5">
+          <p class="p2">Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits.</p>
+          <button class="link-button btn-A w-fit">ABOUT US</button>
+        </div>
+       </div>
+     </section>
+
+    <!-- guided by section -->
+     <section></section>
+    
+    <!-- join the community headline section -->
+     <section></section>
+
+    <!-- discover potential section -->
+     <section></section>
+    
+    <!-- Call to action section -->
+     <section></section>
+
+    <!-- footer -->
+     <footer></footer>
+    
+    <!-- script -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
