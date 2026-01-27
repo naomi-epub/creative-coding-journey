@@ -19,6 +19,9 @@
   --spacing-mobile-hero: 225px;
     /* guided by */
   --spacing-mobile-guided-by: 479px;
+    /* potential */
+  --spacing-tablet-potential: 470px;
+  --spacing-desktop-potential: 600px;  
 }
 @layer base {
   h1 {
