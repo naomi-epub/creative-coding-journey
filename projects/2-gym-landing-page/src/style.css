@@ -13,9 +13,12 @@
   --breakpoint-lg: 1200px;
   --breakpoint-xl: 1280px;
   /* spacing */
+    /* hero */
   --spacing-desktop-hero: 480px;
   --spacing-tablet-hero: 300px;
   --spacing-mobile-hero: 225px;
+    /* guided by */
+  --spacing-mobile-guided-by: 479px;
 }
 @layer base {
   h1 {
@@ -59,6 +62,9 @@
     @apply p-5 border-b border-black;
   }
   .btn-A{
-    @apply pt-3 pb-3 pl-4.25 pr-4.25 bg-secondary;
+    @apply pt-3 pb-3 pl-4.25 pr-4.25 bg-white;
+  }
+  .text-card{
+    @apply flex flex-col p-5 gap-1.5;
   }
 }
