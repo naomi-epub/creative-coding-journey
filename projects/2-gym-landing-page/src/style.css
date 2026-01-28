@@ -36,7 +36,7 @@
   }
   h3 {
     @apply text-[44px] md:text-[57px] font-anek-tamil font-bold;
-    @apply leading-normal;
+    @apply leading-none;
     @apply tracking-[-0.05em];
   }
   h4 {
@@ -51,11 +51,14 @@
   }
 }
 @layer components {
-  .p2 {
-    @apply text-[15px] xl:text-[17px] font-geist font-normal leading-[1.31] tracking-[0.01em];
+  .p1 {
+    @apply font-geist font-normal text-[17px] xl:text-[19px] leading-[1.31] tracking-[0.03em];
   }
-  .p3{
-    @apply text-[14px] font-geist font-bold leading-[1.31] tracking-[0.01em];
+  .p2 {
+    @apply font-geist font-normal text-[15px] xl:text-[17px] leading-[1.31] tracking-[0.01em];
+  }
+  .p3 {
+    @apply font-geist font-bold text-[14px] leading-[1.31] tracking-[0.01em];
   }
   .link-nav {
     @apply text-[15px] font-geist-mono font-normal leading-[1.1] tracking-[-0.01em] cursor-pointer;
@@ -68,19 +71,22 @@
     @apply text-[30px] font-geist-mono font-normal text-black leading-[1.1] tracking-[-0.01em];
     @apply p-5 border-b border-black;
   }
-  .btn-A{
+  .btn-A {
     @apply py-3 px-4.25 bg-white;
   }
-  .btn-cta{
+  .btn-cta {
     @apply px-4.25 py-3 bg-primary text-black rounded-[7.25px] hover:bg-black hover:text-white;
   }
-  .text-card{
+  .text-card {
     @apply flex flex-col p-5 gap-1.5;
   }
-  .logo{
+  .logo {
     @apply font-instrument-sans font-bold text-[20px] leading-[1.1] tracking-[-0.05em];
   }
-  .footer-bottom-card{
+  .footer-bottom-card {
     @apply flex flex-col gap-3.75;
+  }
+  .class-type-card {
+    @apply flex flex-col p-5 gap-6.5 border-b h-full;
   }
 }
