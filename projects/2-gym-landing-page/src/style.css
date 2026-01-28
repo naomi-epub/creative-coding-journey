@@ -90,4 +90,7 @@
     @apply flex flex-col p-5 gap-6.5 border-b h-full;
     @apply md:border-r md:last:border-r-0;
   }
+  .about-card {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
+  }
 }
