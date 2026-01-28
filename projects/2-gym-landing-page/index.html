@@ -32,7 +32,7 @@
       <div class="relative z-50 p-5 flex justify-between items-center">
         <div id="logo" class="flex gap-[8.91px] items-center">
           <img src="./src/icon/logo.svg" alt="PrimalTraining Logo">
-          <p class="font-instrument-sans font-bold text-[20px] leading-[1.1] tracking-[-0.05em]">PrimalTraining</p>
+          <p class="logo">PrimalTraining</p>
         </div>
         <ul class="hidden md:flex gap-12 items-center">
           <li><a href="#" class="link-nav ">HOME</a></li>
@@ -153,7 +153,64 @@
      </section>
 
     <!-- footer -->
-     <footer></footer>
+      <footer class="px-5 pt-6.75 pb-12.5 bg-secondary flex flex-col gap-20">
+        <!-- logo (footer header) -->
+         <div class="flex flex-col gap-7">
+          <picture>
+            <img src="./src/icon/logo.svg" alt="PrimalTraining Logo" class="w-37.5 object-cover md:w-57.5">
+          </picture>
+          <p class="logo text-[52.43px]">PrimalTraining</p>
+         </div>
+      <!-- footer bottom -->
+        <div class="flex flex-col gap-10">
+          <!-- contact -->
+          <div class="footer-bottom-card">
+            <h5>CONTACT</h5>
+            <div class="flex flex-col">
+              <div class="flex">
+                <p class="p3">Email: </p>
+                <p class="p3">hello@figma.com</p>
+              </div>
+              <div class="flex">
+                <p class="p3">Phone: </p>
+                <p class="p3">(203) 555-5555</p>
+              </div>
+            </div>
+          </div>
+          <!-- opening hours -->
+          <div class="footer-bottom-card">
+            <h5>OPENING HOURS</h5>
+            <div class="flex flex-col">
+              <div class="flex gap-6.25">
+                <p class="p3 min-w-30"> MON – FRI: </p>
+                <p class="p3">5:00 – 23:00</p>
+              </div>
+              <div class="flex gap-6.25">
+                <p class="p3 min-w-30">SATURDAYS: </p>
+                <p class="p3">8:00 – 16:00</p>
+              </div>
+              <div class="flex gap-6.25">
+                <p class="p3 min-w-30">SUNDAYS: </p>
+                <p class="p3">8:00 – 13:00</p>
+              </div>
+              <div class="flex gap-6.25">
+                <p class="p3 min-w-30">HOLIDAYS: </p>
+                <p class="p3">8:00 – 16:00</p>
+              </div>
+            </div>
+          </div>
+          <!-- social -->
+          <div class="footer-bottom-card">
+            <h5>SOCIAL</h5>
+            <div>
+              <p class="p3 underline">Instagram</p>
+              <p class="p3 underline">X</p>
+              <p class="p3 underline">LinkedIn</p>
+              <p class="p3 underline">Spotify</p>
+            </div>
+          </div>
+        </div>
+     </footer>
     
     <!-- script -->
     <script type="module" src="/src/main.js"></script>

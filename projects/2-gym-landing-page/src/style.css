@@ -54,6 +54,9 @@
   .p2 {
     @apply text-[15px] xl:text-[17px] font-geist font-normal leading-[1.31] tracking-[0.01em];
   }
+  .p3{
+    @apply text-[14px] font-geist font-bold leading-[1.31] tracking-[0.01em];
+  }
   .link-nav {
     @apply text-[15px] font-geist-mono font-normal leading-[1.1] tracking-[-0.01em] cursor-pointer;
     @apply hover:opacity-60 focus:text-primary transition-colors;
@@ -73,5 +76,11 @@
   }
   .text-card{
     @apply flex flex-col p-5 gap-1.5;
+  }
+  .logo{
+    @apply font-instrument-sans font-bold text-[20px] leading-[1.1] tracking-[-0.05em];
+  }
+  .footer-bottom-card{
+    @apply flex flex-col gap-3.75;
   }
 }
