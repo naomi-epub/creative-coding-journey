@@ -88,5 +88,6 @@
   }
   .class-type-card {
     @apply flex flex-col p-5 gap-6.5 border-b h-full;
+    @apply md:border-b-0 md:border-r md:last:border-r-0;
   }
 }
