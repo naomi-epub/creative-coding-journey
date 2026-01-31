@@ -2,12 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/vector/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3-restaurant-landing-page</title>
+    <title>Liquid Maestro</title>
+    <!-- noto serif display -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <body class="bg-primary">
+    <nav class="fixed top-0 left-0 w-full flex justify-between items-center p-5">
+      <div class="flex flex-col items-center w-24 gap-1.25">
+        <picture>
+          <img src="./src/assets/vector/logo.svg" alt="Liquid Maestro Logo" 
+          class="w-7.5 object-cover">
+        </picture>
+        <p class="text-[17px] font-noto font-semibold leading-[18.7px] tracking-normal text-white text-center">LIQUID MAESTRO</p>
+      </div>
+      <picture>
+        <img src="./src/assets/vector/Hamburger menu.svg" alt="Burger Icon" 
+        class="w-7.5 object-cover">
+      </picture>
+    </nav>
+    <main>
+      <!-- hero -->
+       <section>
+        <picture>
+          <img src="./src/assets/img/pexels-charlotte-may-5947008 1.png" alt="Liquid Maestro Hero Section Image" 
+          class="h-220 w-full object-[55%_50%] object-cover xl:h-full ">
+        </picture>
+       </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @theme {
 /* font */
---font-noto-serif-display: "Noto Serif Display", serif;
+--font-noto: "Noto Serif Display", serif;
 --font-montserrat: "Montserrat", sans-serif;
 /* color */
 --color-primary: #181818;
@@ -14,28 +14,28 @@
 }
 @layer base {
     h1 {
-        @apply text-[84px] xl:text-[102px] font-noto-serif-display font-bold;
-        @apply leading-[1.045]
+        @apply text-[84px] xl:text-[102px] font-noto font-bold;
+        @apply leading-[1.045];
         @apply tracking-normal;
     }
     h2 {
-        @apply text-[38px] xl:text-[42px] font-noto-serif-display font-bold;
-        @apply leading-[1.2]
+        @apply text-[38px] xl:text-[42px] font-noto font-bold;
+        @apply leading-[1.2];
         @apply tracking-[0.02em];
     }
     h3 {
-        @apply text-[32px] xl:text-[36px] font-noto-serif-display font-bold;
-        @apply leading-[1.2]
+        @apply text-[32px] xl:text-[36px] font-noto font-bold;
+        @apply leading-[1.2];
         @apply tracking-[-0.02em];
     }
     h4 {
-        @apply text-[28px] xl:text-[36px] font-noto-serif-display font-bold;
-        @apply leading-[1.385]
+        @apply text-[28px] xl:text-[36px] font-noto font-bold;
+        @apply leading-[1.385];
         @apply tracking-[0.02em];
     }
     h5 {
-        @apply text-[28px] font-noto-serif-display font-bold;
-        @apply leading-[1.2]
+        @apply text-[28px] font-noto font-bold;
+        @apply leading-[1.2];
         @apply tracking-[0.02em];
     }
 }
@@ -45,14 +45,15 @@
         @apply leading-normal;
         @apply tracking-[-0.02em];
     }
-    .subheader {
-        @apply text-[17px] xl:text-[20px] font-noto-serif-display font-medium;
-        @apply leading-[1.385]
+    .sub-header {
+        @apply text-[17px] xl:text-[20px] font-noto font-medium;
+        @apply leading-[1.385];
         @apply tracking-[0.02em];
+        @apply text-white;
     }
     .p2 {
         @apply text-[16px] xl:text-[18px] font-montserrat font-normal;
-        @apply leading-normal
+        @apply leading-normal;
         @apply tracking-[-0.02em];
     }
     .p1 {
