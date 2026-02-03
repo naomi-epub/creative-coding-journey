@@ -7,7 +7,7 @@
 --color-primary: #181818;
 --color-accent: #D16868;
 /* breakpoint */
---breakpoint-md: 800px;
+--breakpoint-md: 768px;
 --breakpoint-xl: 1280px;
 /* spacing */
 --spacing-desktop-hero: 480px;
@@ -42,7 +42,7 @@
 @layer components {
     .btn {
         @apply text-[16px] font-noto font-black leading-normal tracking-[0.05em];
-        @apply text-white border border-white w-fit p-2 py-3 px-12 items-center;
+        @apply text-white border border-white w-fit p-2 xl:py-3 px-12 items-center;
     }
     .wtf {
         @apply text-[15px] xl:text-[16px] font-montserrat font-semibold;
