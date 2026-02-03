@@ -8,7 +8,7 @@
 --color-accent: #D16868;
 /* breakpoint */
 --breakpoint-md: 768px;
---breakpoint-xl: 1280px;
+--breakpoint-xl: 912px;
 /* spacing */
 --spacing-desktop-hero: 480px;
 }
@@ -29,7 +29,7 @@
         @apply tracking-[-0.02em];
     }
     h4 {
-        @apply text-[28px] xl:text-[36px] font-noto font-bold;
+        @apply text-[28px] xl:text-[36px] font-noto font-medium;
         @apply leading-[1.385];
         @apply tracking-[0.02em];
     }

@@ -45,7 +45,7 @@
           class="h-95 object-[90%_55%] object-cover md:h-150 xl:w-[120vw]">
         </picture>
         <!-- hero text -->
-        <div class="absolute flex flex-col items-center gap-10 p-7.5 w-full top-[35%] xl:top-[40%]">
+        <div class="absolute flex flex-col items-center gap-10 p-7.5 w-full top-[35%] md:top-[40%] xl:top-[30%]">
           <div class="relative flex flex-col gap-2">
             <!-- big title  -->
             <div class="w-75 xl:w-125">
@@ -65,11 +65,26 @@
         </div>
        </section>
        <!-- wtf section -->
-       <section class="p-7.5">
-        <h4 class="text-white">Liquid Maestro, the newest hotspot in downtown Los Angeles. Our skilled mixologists are passionate about crafting exceptional cocktails that will delight your senses.</h4>
-        
-       <section>
-
+       <section class="relative p-5 py-75 flex flex-col items-center">
+        <div class="relative max-w-214 flex justify-center md:max-w-162.5 xl:max-w-212.5 ">
+          <!-- fake BG -->
+           <div class="absolute inset-0 bg-primary -z-10"></div>
+          <!-- img -->
+           <img class="absolute w-50 object-cover -top-55"
+            src="./src/assets/img/pexels-charlotte-may-5947024 copy 1.png" 
+            alt="">
+          <!-- text -->
+           <div class="relative p-2.5 flex flex-col gap-9">
+              <h4 class="text-white">Liquid Maestro, the newest hotspot in downtown <span class="underline">Los Angeles</span>. Our skilled mixologists are passionate about crafting exceptional cocktails that will <span class="font-black">delight your senses.</span></h4>
+              <p class="p2 text-white">With an ambiance that exudes elegance and a commitment to delivering unforgettable experiences, Liquid Maestro is the ultimate destination for cocktail enthusiasts. Join us for an exquisite journey into the world of liquid artistry.</p>
+           </div>
+        </div>
+        <!-- A line decoration -->
+          <img class="absolute object-cover -z-20
+          w-full h-183 object-[110%_0%] bottom-0 -left-5
+          md:h-225 md:object-[170%_80%] md:-bottom-4 md:-left-10
+          xl:h-250 xl:object-[300%_80%] xl:-bottom-5 xl:-left-60"
+        src="./src/assets/vector/A (Stroke).svg" alt="">
        </section>
     </main>
     <script type="module" src="./src/main.js"></script>
