@@ -45,7 +45,7 @@
           class="h-95 object-[90%_55%] object-cover md:h-150 xl:w-[120vw]">
         </picture>
         <!-- hero text -->
-        <div class="absolute flex flex-col items-center gap-10 p-7.5 w-full top-[35%] md:top-[40%] xl:top-[30%]">
+        <div class="absolute flex flex-col gap-10 p-7.5 w-full top-[35%] md:top-[40%] xl:top-[30%] md:px-20 items-center">
           <div class="relative flex flex-col gap-2">
             <!-- big title  -->
             <div class="w-75 xl:w-125">
@@ -65,7 +65,7 @@
         </div>
        </section>
        <!-- wtf section -->
-       <section class="relative p-5 py-75 flex flex-col items-center">
+       <section class="relative p-5 py-75 md:px-20 flex flex-col">
         <div class="relative max-w-214 flex justify-center md:max-w-162.5 xl:max-w-212.5 ">
           <!-- fake BG -->
            <div class="absolute inset-0 bg-primary -z-10"></div>
@@ -80,11 +80,37 @@
            </div>
         </div>
         <!-- A line decoration -->
-          <img class="absolute object-cover -z-20
-          w-full h-183 object-[110%_0%] bottom-0 -left-5
-          md:h-225 md:object-[170%_80%] md:-bottom-4 md:-left-10
-          xl:h-250 xl:object-[300%_80%] xl:-bottom-5 xl:-left-60"
-        src="./src/assets/vector/A (Stroke).svg" alt="">
+        <img class="absolute object-cover -z-20
+        w-full h-183 object-[100%_0%] -bottom-2 left-0
+        md:h-225 md:object-[100%_50%] md:-left-[50%]
+        xl:h-250"
+        src="./src/assets/vector/A (Stroke).svg">
+       </section>
+
+      <!-- opening hours -->
+       <section class="relative flex flex-col overflow-hidden">
+        <!-- img -->
+        <picture class="grid grid-cols-1 md:grid-cols-2">
+          <img class="w-full object-cover"
+          src="./src/assets/img/pexels-cottonbro-studio-4667182 1.png">
+          <img class="w-full object-cover"
+          src="./src/assets/img/pexels-cottonbro-studio-4667182 4.png">
+        </picture>
+
+        <!-- hours -->
+        <div class="flex flex-col px-7.5 md:px-20 py-22.5 gap-15.75">
+          <h3 class="text-accent"><span class="font-bold">Opening</span> Hours</h3>
+          <!-- details -->
+           <div class="flex flex-col md:max-w-[50%]">
+            <p class="p1 text-white py-2.5 border-t-[0.5px] border-dashed">Mon - Thu:<span class="font-semibold "> 5 PM - 12 AM</span></p>
+            <p class="p1 text-white py-2.5 border-t-[0.5px] border-dashed">Fri - Sat:<span class="font-semibold"> 5 PM - 2 AM</span></p>
+            <p class="p1 text-white py-2.5 border-y-[0.5px] border-dashed">Sun:<span class="font-semibold"> Closed</span></p>
+           </div>
+          
+        </div>
+        <!-- O line decoration -->
+         <img class="absolute top-42 w-full object-cover left-[60%] xl:left-[80%] xl:top-[30%] xl:w-212.5"
+         src="./src/assets/vector/O (Stroke).svg">
        </section>
     </main>
     <script type="module" src="./src/main.js"></script>

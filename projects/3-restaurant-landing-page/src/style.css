@@ -24,7 +24,7 @@
         @apply tracking-[0.02em];
     }
     h3 {
-        @apply text-[32px] xl:text-[36px] font-noto font-bold;
+        @apply text-[32px] xl:text-[36px] font-noto font-normal;
         @apply leading-[1.2];
         @apply tracking-[-0.02em];
     }
